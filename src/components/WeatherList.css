@@ -1,0 +1,43 @@
+.weather-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.weather-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-lighter);
+  font-size: 0.95rem;
+}
+
+.load-more-button {
+  padding: 10px 28px;
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.load-more-button:hover {
+  background: var(--primary);
+  color: var(--bg-card);
+}
+
+@media (max-width: 720px) {
+  .weather-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-lighter: #94a3b8;
+  --border-color: #e2e8f0;
+  --bg-card: #fff;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --error-bg: #fef2f2;
+  --error-text: #ef4444;
+}
+
+[data-theme="dark"] {
+  --bg-main: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-lighter: #64748b;
+  --border-color: #334155;
+  --bg-card: #1e293b;
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --error-bg: #450a0a;
+  --error-text: #fca5a5;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}

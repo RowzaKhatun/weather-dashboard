@@ -1,0 +1,121 @@
+.weather-detail {
+  max-width: 640px;
+  margin: 0 auto;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 2px;
+  margin-bottom: 20px;
+  transition: color 0.15s;
+}
+
+.back-button:hover {
+  color: var(--primary-hover);
+}
+
+.detail-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
+  border-radius: 16px;
+  padding: 32px;
+  color: var(--bg-card);
+  margin-bottom: 24px;
+}
+
+.detail-hero h2 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+
+.detail-hero h2 span {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.detail-description {
+  text-transform: capitalize;
+  opacity: 0.85;
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+}
+
+.detail-temp-main {
+  margin-bottom: 4px;
+}
+
+.detail-temp-value {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.detail-feels {
+  opacity: 0.75;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.detail-icon {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 12px var(--shadow-color));
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.detail-grid-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grid-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-lighter);
+}
+
+.grid-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+@media (max-width: 480px) {
+  .detail-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .detail-icon {
+    width: 96px;
+    height: 96px;
+  }
+}
